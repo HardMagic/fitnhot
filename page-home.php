@@ -12,7 +12,7 @@
 					<div id="top-story-middle">
 						<div id="middle-img">
 							<?php $mvp_slider = get_option('mvp_slider'); if ($mvp_slider == "true") { ?>
-								<?php $recent = new WP_Query(array('tag' => get_option('mvp_slider_tags'), 'posts_per_page' => get_option('mvp_slider_num')  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
+								<?php $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'incsub_wiki_tag' => 'featured-2', 'posts_per_page' => get_option('mvp_slider_num')  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 								<?php } endwhile; ?>
 								<?php if (isset($do_not_duplicate)) { $recent = new WP_Query(array( 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '1'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 									<a href="<?php the_permalink(); ?>" rel="bookmark">
