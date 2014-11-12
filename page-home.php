@@ -27,7 +27,7 @@
 										</div><!--top-middle-image-->
 										<div id="middle-text">
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
-											<h2><?php the_title(); ?></h2>
+											<h2><?php the_title(); ?>1111</h2>
 											<p><?php echo excerpt(22); ?></p>
 										</div><!--middle-text-->
 									<?php } ?>
@@ -47,7 +47,7 @@
 										</div><!--top-middle-image-->
 										<div id="middle-text">
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
-											<h2><?php the_title(); ?></h2>
+											<h2><?php the_title(); ?>2222</h2>
 											<p><?php echo excerpt(22); ?></p>
 										</div><!--middle-text-->
 									<?php } ?>
@@ -100,7 +100,7 @@
 										<?php endif; ?>
 									</div><!--top-story-image-->
 								<?php } ?>
-								<h2><?php the_title(); ?></h2>
+								<h2><?php the_title(); ?>4444</h2>
 								</a>
 							</li>
 							<?php } endwhile; } ?>
@@ -462,7 +462,7 @@
 									<span class="widget-cat-contain"><h3 class="widget-cat"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3></span>
 								</div><!--wide-img-->
 								<div class="wide-text">
-									<h2><?php the_title(); ?>1111</h2>
+									<h2><?php the_title(); ?></h2>
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
 									<p><?php echo excerpt(20); ?></p>
 								</div><!--wide-text-->
@@ -526,7 +526,7 @@
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>33333</h2>
+									<h2><?php the_title(); ?></h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--home-list-content-->
 								</a>
@@ -564,7 +564,7 @@ $url = $thumb['0']; ?>
 								</div><!--split-img-->
 								<div class="split-text">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>444444</h2>
+									<h2><?php the_title(); ?></h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--split-text-->
 								</a>
