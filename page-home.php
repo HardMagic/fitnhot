@@ -49,6 +49,7 @@
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
 											<h2><?php the_title(); ?>2222</h2>
 											<p><?php echo excerpt(22); ?></p>
+											<?php print_r($recent); ?>
 										</div><!--middle-text-->
 									<?php } ?>
 									</a>
