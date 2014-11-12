@@ -496,7 +496,8 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/images/video-but.png" alt="<?php the_title(); ?>" />
 										</div><!--video-button-->
 									<?php endif; 
-									echo get_query_var( 'taxonomy' );
+								$the_tax = get_taxonomy( get_query_var( 'taxonomy' ) );
+echo $the_tax->labels->name;
 									?>
 									<span class="widget-cat-contain"><h3 class="widget-cat">One Two</h3></span>
 									
