@@ -418,7 +418,7 @@
 							<?php } endwhile; ?>
 							<?php if (isset($do_not_duplicate)) { $mvp_posts_num = get_option('mvp_posts_num'); $paged = (get_query_var('page')) ? get_query_var('page') : 1; query_posts(array( 'posts_per_page' => $mvp_posts_num, 'post__not_in'=>$do_not_duplicate, 'paged' =>$paged )); if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<li class="infinite-post">
-								<a href="aaa<?php the_permalink(); ?>" rel="bookmark">
+								<a href="<?php the_permalink(); ?>" rel="bookmark">
 								<div class="wide-img">
 									<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
 									<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-thumb' ); ?>
@@ -435,7 +435,7 @@
 									<span class="widget-cat-contain"><h3 class="widget-cat"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3></span>
 								</div><!--wide-img-->
 								<div class="wide-text">
-									<h2><?php the_title(); ?></h2>
+									<h2><?php the_title(); ?>hello</h2>
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
 									<p><?php echo excerpt(20); ?></p>
 								</div><!--wide-text-->
