@@ -34,7 +34,7 @@ if ( !is_home() ) { ?>
 			<?php } ?>
 			<div id="home-main">
 				<div id="post-area" itemscope itemtype="http://schema.org/Article" <?php post_class(); ?>>
-					<h3 class="story-cat"><?php the_category() ?></h3>
+					<h3 class="story-cat"><?php the_category() ?>ssssss</h3>
 					<h1 class="story-title" itemprop="name"><?php the_title(); ?></h1>
 					<div id="content-area">
 						<?php the_content(); ?>
