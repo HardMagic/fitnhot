@@ -38,7 +38,6 @@ if ( !is_home() ) { ?>
 					<h1 class="story-title" itemprop="name"><?php the_title(); ?></h1>
 					<div id="content-area">
 						<?php the_content(); ?>
-						<h3>here</h3>
 					<div id="post-info">
 						<?php _e( 'By', 'mvp-text' ); ?>&nbsp;<span class="author" itemprop="author"><?php the_author_posts_link(); ?></span>&nbsp;|&nbsp;<time class="post-date" itemprop="datePublished" datetime="<?php the_time('Y-m-d'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time>
 						<span class="comments-number"><a href="<?php comments_link(); ?>"><?php comments_number(__( '0 Comments', 'mvp-text'), __('1 Comment', 'mvp-text'), __('% Comments', 'mvp-text')); ?></a></span>
