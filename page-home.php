@@ -501,8 +501,7 @@
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
 									<h2><?php the_title(); ?></h2>
-									<p><?php echo excerpt(19);   function get_current_post_taxonomies(){
-        global $post;
+									<p><?php echo excerpt(19);          global $post;
 
         $taxonomy_names = get_object_taxonomies( $post );
         print_r( $taxonomy_names ); ?> 
