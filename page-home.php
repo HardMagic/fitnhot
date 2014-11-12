@@ -500,7 +500,7 @@
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?22222</h2>
+									<h2><?php the_title(); ?>222222</h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--home-list-content-->
 								</a>
@@ -526,7 +526,7 @@
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>3333</h2>
+									<h2><?php the_title(); ?>33333</h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--home-list-content-->
 								</a>
@@ -564,7 +564,7 @@ $url = $thumb['0']; ?>
 								</div><!--split-img-->
 								<div class="split-text">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>44444</h2>
+									<h2><?php the_title(); ?>444444</h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--split-text-->
 								</a>
@@ -591,7 +591,7 @@ $url = $thumb['0']; ?>
 								</div><!--split-img-->
 								<div class="split-text">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>55555</h2>
+									<h2><?php the_title(); ?></h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--split-text-->
 								</a>
