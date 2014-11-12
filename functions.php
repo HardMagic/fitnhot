@@ -1,7 +1,6 @@
 <?php
 
 // AUTOMATICALLY ADD FEATURED IMAGE
-
 function autoset_featured() {
           global $post;
           $already_has_thumb = has_post_thumbnail($post->ID);
@@ -20,3 +19,20 @@ add_action('draft_to_publish', 'autoset_featured');
 add_action('new_to_publish', 'autoset_featured');
 add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
+
+
+// MADE FOR CUSTOM POST TYPES CATEGORIES
+function get_the_category_bytax( $id = false, $tcat = 'category' ) {
+    $categories = get_the_terms( $id, $tcat );
+    if ( ! $categories )
+        $categories = array();
+
+    $categories = array_values( $categories );
+
+    foreach ( array_keys( $categories ) as $key ) {
+        _make_cat_compat( $categories[$key] );
+    }
+
+    // Filter name is plural because we return alot of categories (possibly more than #13237) not just one
+    return apply_filters( 'get_the_categories', $categories );
+}
