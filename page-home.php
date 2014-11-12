@@ -27,7 +27,7 @@
 										</div><!--top-middle-image-->
 										<div id="middle-text">
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
-											<h2><?php the_title(); ?>8888</h2>
+											<h2><?php the_title(); ?></h2>
 											<p><?php echo excerpt(22); ?></p>
 										</div><!--middle-text-->
 									<?php } ?>
@@ -47,7 +47,7 @@
 										</div><!--top-middle-image-->
 										<div id="middle-text">
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
-											<h2><?php the_title(); ?>7777</h2>
+											<h2><?php the_title(); ?></h2>
 											<p><?php echo excerpt(22); ?></p>
 										</div><!--middle-text-->
 									<?php } ?>
