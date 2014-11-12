@@ -87,8 +87,9 @@
 					<?php } else { ?>
 						<span class="top-header-contain"><h3><?php echo get_option('mvp_featured_right'); ?></h3></span>
 						<ul class="top-stories">
-							<?php if (!empty($do_not_duplicate)) { $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'post__not_in' => $do_not_duplicate, 'category_name' => 'sex', 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
+							<?php if (!empty($do_not_duplicate)) { $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
 							<li>
+								<?php print_r($recent); ?>
 								<a href="<?php the_permalink() ?>">
 								<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
 									<div class="top-story-image">
