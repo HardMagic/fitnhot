@@ -100,7 +100,7 @@
 										<?php endif; ?>
 									</div><!--top-story-image-->
 								<?php } ?>
-								<h2><?php the_title(); ?>4444</h2>
+								<h2><?php the_title(); ?></h2>
 								</a>
 							</li>
 							<?php } endwhile; } ?>
