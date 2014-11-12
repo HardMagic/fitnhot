@@ -495,16 +495,12 @@
 										<div class="video-button">
 											<img src="<?php echo get_template_directory_uri(); ?>/images/video-but.png" alt="<?php the_title(); ?>" />
 										</div><!--video-button-->
-									<?php endif; 
-									?>
-									<span class="widget-cat-contain"><h3 class="widget-cat">One Two</h3></span>
-									
+									<?php endif; ?>
+									<span class="widget-cat-contain"><h3 class="widget-cat"><?php $category = get_the_category(); print_r($category)?></h3></span>
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); $the_tax = get_taxonomy( get_query_var( 'taxonomy' ) );
-echo $the_tax->labels->name;
-								 ?></h2>
+									<h2><?php the_title(); ?></h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--home-list-content-->
 								</a>
