@@ -5,9 +5,11 @@ get_header( 'wiki' );
 
 <?php get_header(); ?>
 
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54635bf76c49c157" async="async"></script>
-
+<?php
+// ADDS FACEBOOK & SOCIAL MEDIA LINKS TO VERTICAL SIDEBAR
+if ( !is_home() ) { ?>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54635bf76c49c157" async="async"></script>
+<?php } ?>
 
 	<div id="content-wrapper">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

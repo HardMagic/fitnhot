@@ -481,7 +481,7 @@
 						<?php $mvp_slider = get_option('mvp_slider'); $mvp_posts = get_option('mvp_featured_posts'); if (($mvp_slider == "true") || ($mvp_posts == "true")) { ?>
 							<?php $recent = new WP_Query(array( 'tag' => get_option('mvp_slider_tags'), 'posts_per_page' => get_option('mvp_slider_num')  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 							<?php } endwhile; ?>
-							<?php if (isset($do_not_duplicate)) { $mvp_posts_num = get_option('mvp_posts_num'); $paged = (get_query_var('page')) ? get_query_var('page') : 1; query_posts(array( 'posts_per_page' => $mvp_posts_num, 'post__not_in'=>$do_not_duplicate, 'paged' =>$paged )); if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (isset($do_not_duplicate)) { $mvp_posts_num = get_option('mvp_posts_num'); $paged = (get_query_var('page')) ? get_query_var('page') : 1; query_posts(array( 'posts_per_page' => $mvp_posts_num, 'post__not_in'=>$do_not_duplicate, 'post_type' => 'incsub_wiki', 'paged' =>$paged )); if (have_posts()) : while (have_posts()) : the_post(); ?>
 							<li class="infinite-post">
 								<a href="<?php the_permalink(); ?>" rel="bookmark">
 								<div class="home-list-img">
@@ -500,7 +500,7 @@
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
-									<h2><?php the_title(); ?>222222</h2>
+									<h2><?php the_title(); ?></h2>
 									<p><?php echo excerpt(19); ?></p>
 								</div><!--home-list-content-->
 								</a>
