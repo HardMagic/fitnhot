@@ -29,7 +29,6 @@
 											<h3><?php $category = get_the_category(); echo $category[0]->cat_name; ?></h3>
 											<h2><?php the_title(); ?>1111</h2>
 											<p><?php echo excerpt(22); ?></p>
-											<?php print_r($recent); ?>
 										</div><!--middle-text-->
 									<?php } ?>
 									</a>
@@ -90,7 +89,6 @@
 						<ul class="top-stories">
 							<?php if (!empty($do_not_duplicate)) { $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
 							<li>
-								<?php print_r($recent); ?>
 								<a href="<?php the_permalink() ?>">
 								<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
 									<div class="top-story-image">
