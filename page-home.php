@@ -12,7 +12,7 @@
 					<div id="top-story-middle">
 						<div id="middle-img">
 							<?php $mvp_slider = get_option('mvp_slider'); if ($mvp_slider == "true") { ?>
-								<?php $recent = new WP_Query(array( 'tag' => get_option('mvp_slider_tags'), 'posts_per_page' => get_option('mvp_slider_num')  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
+								<?php $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'tag' => get_option('mvp_slider_tags'), 'posts_per_page' => get_option('mvp_slider_num')  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 								<?php } endwhile; ?>
 								<?php if (isset($do_not_duplicate)) { $recent = new WP_Query(array( 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '1'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 									<a href="<?php the_permalink(); ?>" rel="bookmark">
@@ -61,7 +61,7 @@
 						<?php } else { ?>
 							<span class="top-header-contain"><h3><?php echo get_option('mvp_featured_left'); ?></h3></span>
 							<ul class="top-stories">
-								<?php if (!empty($do_not_duplicate)) { $current_category = get_option('mvp_featured_left'); $category_id = get_cat_ID($current_category); $recent = new WP_Query(array( 'cat' => $category_id, 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
+								<?php if (!empty($do_not_duplicate)) { $current_category = get_option('mvp_featured_left'); $category_id = get_cat_ID($current_category); $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'incsub_wiki_category' => 'fashion', 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (isset($do_not_duplicate)) { ?>
 								<li>
 									<a href="<?php the_permalink(); ?>" rel="bookmark">
 									<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
@@ -87,7 +87,7 @@
 					<?php } else { ?>
 						<span class="top-header-contain"><h3><?php echo get_option('mvp_featured_right'); ?></h3></span>
 						<ul class="top-stories">
-							<?php if (!empty($do_not_duplicate)) { $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'post__not_in' => $do_not_duplicate, 'incsub_wiki_category' => 'beauty', 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
+							<?php if (!empty($do_not_duplicate)) { $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'incsub_wiki_category' => 'beauty', 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
 							<li>
 								<a href="<?php the_permalink() ?>">
 								<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
