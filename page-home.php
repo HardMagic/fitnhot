@@ -496,7 +496,7 @@
 											<img src="<?php echo get_template_directory_uri(); ?>/images/video-but.png" alt="<?php the_title(); ?>" />
 										</div><!--video-button-->
 									<?php endif; ?>
-									<span class="widget-cat-contain"><h3 class="widget-cat"><?php $category = get_the_terms( $post->ID, 'incsub_wiki_category' ); echo $category[0]->slug; $category[1]->slug; $category[2]->slug; $category[3]->slug; $category[4]->slug; $category[5]->slug; ?></h3></span>
+									<span class="widget-cat-contain"><h3 class="widget-cat"><?php $category = get_the_terms( $post->ID, 'incsub_wiki_category' ); echo $category[0]->slug;  echo $category[1]->slug; echo $category[2]->slug; echo $category[3]->slug; echo $category[4]->slug; echo $category[5]->slug; ?></h3></span>
 								</div><!--home-list-img-->
 								<div class="home-list-content">
 									<span class="widget-info"><span class="widget-author"><?php the_author(); ?></span> | <?php the_time(get_option('date_format')); ?></span>
