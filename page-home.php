@@ -87,7 +87,7 @@
 					<?php } else { ?>
 						<span class="top-header-contain"><h3><?php echo get_option('mvp_featured_right'); ?></h3></span>
 						<ul class="top-stories">
-							<?php if (!empty($do_not_duplicate)) { $current_category = get_option('mvp_featured_right'); $category_id = get_cat_ID($current_category); $recent = new WP_Query(array( 'cat' => $category_id, 'post__not_in' => $do_not_duplicate, 'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
+							<?php if (!empty($do_not_duplicate)) { $current_category = get_option('mvp_featured_right'); $category_id = get_cat_ID($current_category); $recent = new WP_Query(array('post_type' => 'incsub_wiki', 'post__not_in' => $do_not_duplicate, 'tag' => 'beauty',  'posts_per_page' => '2'  )); while($recent->have_posts()) : $recent->the_post(); $do_not_duplicate[] = $post->ID; if (!empty($do_not_duplicate)) { ?>
 							<li>
 								<a href="<?php the_permalink() ?>">
 								<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
