@@ -12,4 +12,4 @@ Template: braxton
 
 @import url("../braxton/style.css");
 
-
+.is_home .addthis_toolbox { display: none !important; }
