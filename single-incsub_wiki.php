@@ -10,7 +10,7 @@ get_header( 'wiki' );
 if ( !is_home() ) { ?>
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54635bf76c49c157" async="async"></script>
 <?php } ?>
-
+ <?php echo get_the_title( $ID ); ?> 
 	<div id="content-wrapper">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div id="content-main">
