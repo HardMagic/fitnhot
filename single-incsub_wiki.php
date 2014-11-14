@@ -5,12 +5,6 @@ get_header( 'wiki' );
 
 <?php get_header(); ?>
 
-<?php
-// ADDS FACEBOOK & SOCIAL MEDIA LINKS TO VERTICAL SIDEBAR
-if ( !is_front_page() ) { ?>
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54635bf76c49c157" async="async"></script>
-<?php } ?>
-
 	<div id="content-wrapper">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div id="content-main">
