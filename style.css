@@ -12,4 +12,4 @@ Template: braxton
 
 @import url("../braxton/style.css");
 
-.is_home #at4-share { display: none;}
+.home #at4-share { display: none;}
